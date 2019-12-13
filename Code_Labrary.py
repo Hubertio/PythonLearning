@@ -12,7 +12,7 @@ def get_database_login_args(args):
         args = parser.parse_args()
         return args
     else:
-        print("Incorrect number of arguments!. expected 4 but recieved ", len(args) - 1)
+        print("Incorrect number of arguments for connecting to the database!. expected 4 but recieved ", len(args) - 1)
         sys.exit()
 
 
@@ -20,7 +20,7 @@ def get_database_login_args(args):
 def main(args):
     args = get_database_login_args(args)
 
-    print(args.user)
+    print(args)
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv))
