@@ -12,7 +12,7 @@ def get_database_login_args(args):
         args = parser.parse_args()
         return args
     else:
-        print("Incorrect number of arguments specified!. expected 4 but recieved ", len(args) - 1)
+        print("Incorrect number of arguments specified. expected 4 but recieved ", len(args) - 1)
         sys.exit()
 
 
