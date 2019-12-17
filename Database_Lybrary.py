@@ -52,9 +52,9 @@ class Database:
         cursor = self.connection.cursor()
 
         # Open and read the file as a single buffer
-        fd = open(filename, 'r')
-        sqlFile = fd.read()
-        fd.close()
+        with open(filename, 'r') as fd:
+            sqlFile = fd.read()
+
 
         # all SQL commands (split on ';')
         sqlCommands = sqlFile.split(';')
@@ -78,8 +78,6 @@ def main(args):
     print(args)
 
     db = Database
-    db.add_argument("host", type=str, help="hostname")
-    f = 'ff'
 
 
 if __name__ == '__main__':
